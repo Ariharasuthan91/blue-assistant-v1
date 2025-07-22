@@ -1,27 +1,11 @@
 workflows:
   flutter-build:
-    name: Flutter Build for Blue Assistant
-    max_build_duration: 20
-    instance_type: mac_mini
+    name: Flutter Build
+    working_directory: flutter  # 👈 set the correct subfolder
     environment:
-      vars:
-        FLUTTER_PROJECT_PATH: "flutter_blue"
       flutter: stable
-      xcode: latest
-    triggering:
-      events:
-        - push
-      branch_patterns:
-        - pattern: "main"
-          include: true
     scripts:
-      - name: Install Flutter dependencies
-        script: |
-          cd $FLUTTER_PROJECT_PATH
-          flutter pub get
-      - name: Build APK
-        script: |
-          cd $FLUTTER_PROJECT_PATH
-          flutter build apk --debug
+      - flutter pub get
+      - flutter build apk
     artifacts:
-      - flutter_blue/build/**/outputs/**/*.apk
+      - build/app/outputs/flutter-apk/app-release.apk
