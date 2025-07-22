@@ -4,7 +4,7 @@ workflows:
     environment:
       vars:
         PACKAGE_NAME: "com.example.blueassistant"
-      flutter: null  # Add this line even for native to prevent default Flutter config
+      xcode: null  # Just to avoid iOS config
     scripts:
       - name: Make Gradle Executable
         script: chmod +x ./gradlew
