@@ -1,0 +1,8 @@
+workflows:
+  android:
+    name: Build Blue Assistant APK
+    max_build_duration: 10
+    environment:
+      android: "30"
+    scripts:
+      - ./gradlew assembleDebug
