@@ -1,15 +1,15 @@
 workflows:
   android-workflow:
     name: Build Blue Assistant APK
-    max_build_duration: 60
     environment:
+      java: 17
       vars:
         PACKAGE_NAME: "com.example.blueassistant"
     scripts:
-      - name: Set Gradle Permission
+      - name: Make Gradle Executable
         script: chmod +x ./gradlew
       - name: Build APK
         script: ./gradlew assembleDebug
     artifacts:
-          - build/app/outputs/flutter-apk/app-debug.apk
+      - build/app/outputs/flutter-apk/app-debug.apk
       - app/build/outputs/apk/debug/app-debug.apk
