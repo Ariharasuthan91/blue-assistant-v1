@@ -4,12 +4,9 @@ workflows:
     environment:
       java: 17
     scripts:
-      - name: Make Gradle Executable
+      - name: Make Gradle executable
         script: chmod +x ./gradlew
-      - name: Clean Project
-        script: ./gradlew clean
-      - name: Build APK (Debug)
+      - name: Build Debug APK
         script: ./gradlew assembleDebug
     artifacts:
-      - app/build/outputs/apk/debug/app-debug.apk
       - build/app/outputs/flutter-apk/app-debug.apk
