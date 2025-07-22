@@ -1,7 +1,10 @@
 workflows:
   android-workflow:
     name: Build Blue Assistant APK
+    max_build_duration: 15
     environment:
+      android: # ✅ this part must be present
+        image: android-stable
       vars:
         PACKAGE_NAME: "com.example.blueassistant"
     scripts:
