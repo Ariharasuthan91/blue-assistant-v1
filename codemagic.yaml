@@ -4,7 +4,6 @@ workflows:
     environment:
       vars:
         PACKAGE_NAME: "com.example.blueassistant"
-      xcode: null  # Just to avoid iOS config
     scripts:
       - name: Make Gradle Executable
         script: chmod +x ./gradlew
