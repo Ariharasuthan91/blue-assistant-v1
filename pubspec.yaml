@@ -6,7 +6,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^6.1.5
   speech_to_text: ^7.2.0
-  flutter_tts: ^3.5.0
-  shared_preferences: ^2.0.15
-  provider: ^6.0.5
+  flutter_tts: ^3.8.5
+  shared_preferences: ^2.2.2
