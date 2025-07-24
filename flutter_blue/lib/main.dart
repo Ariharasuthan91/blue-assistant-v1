@@ -1,20 +1,17 @@
+
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
 
-void main() {
-  runApp(BlueApp());
-}
+void main() => runApp(MyApp());
 
-class BlueApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Blue Assistant',
-      theme: ThemeData(
-        primaryColor: Color(0xFF001F3F),
-        accentColor: Color(0xFF00BFFF),
+      home: Scaffold(
+        appBar: AppBar(title: Text('Blue Assistant')),
+        body: Center(child: Text('Welcome to Blue Assistant!')),
       ),
-      home: HomeScreen(),
     );
   }
 }
