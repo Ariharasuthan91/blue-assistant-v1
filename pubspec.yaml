@@ -1,12 +1,21 @@
-name: flutter_blue
-description: Blue Assistant Flutter version
+name: blue_assistant_flutter
+description: Blue Assistant Flutter Version with Tamil + English voice features
 version: 1.0.0+1
+
 environment:
-  sdk: ">=2.18.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
+
 dependencies:
   flutter:
     sdk: flutter
   provider: ^6.1.5
   speech_to_text: ^7.2.0
-  flutter_tts: ^3.8.5
+  flutter_tts: ^4.2.3
   shared_preferences: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
